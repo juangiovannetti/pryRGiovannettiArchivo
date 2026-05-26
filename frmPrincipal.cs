@@ -34,5 +34,11 @@ namespace pryRGiovannettiArchivo
             frmClientesDeudores V = new frmClientesDeudores();
             V.ShowDialog();
         }
+
+        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoOrdenado v = new frmListadoOrdenado();
+            v.ShowDialog();
+        }
     }
 }
