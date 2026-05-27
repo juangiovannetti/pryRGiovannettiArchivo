@@ -122,6 +122,9 @@
             // 
             this.cmbModo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModo.FormattingEnabled = true;
+            this.cmbModo.Items.AddRange(new object[] {
+            "Ascendente",
+            "Descendente"});
             this.cmbModo.Location = new System.Drawing.Point(433, 39);
             this.cmbModo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbModo.Name = "cmbModo";
@@ -144,12 +147,16 @@
             // 
             this.cmbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCampo.FormattingEnabled = true;
+            this.cmbCampo.Items.AddRange(new object[] {
+            "Código",
+            "Nombre",
+            "Deuda",
+            "Limite de crédito"});
             this.cmbCampo.Location = new System.Drawing.Point(151, 39);
             this.cmbCampo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCampo.Name = "cmbCampo";
             this.cmbCampo.Size = new System.Drawing.Size(157, 24);
             this.cmbCampo.TabIndex = 1;
-            this.cmbCampo.SelectedIndexChanged += new System.EventHandler(this.cmbCampo_SelectedIndexChanged);
             // 
             // lblModo
             // 

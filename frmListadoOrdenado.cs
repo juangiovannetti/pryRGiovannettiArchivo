@@ -20,55 +20,39 @@ namespace pryRGiovannettiArchivo
         clsArchivo objOrden = new clsArchivo();
         private void btnListar_Click(object sender, EventArgs e)
         {
-            cmbCampo.SelectedIndex = -1;
-            cmbModo.SelectedIndex = -1;
+            objOrden.CargarVector();
 
-            switch (cmbModo.SelectedIndex)
+            switch (cmbCampo.SelectedIndex)
             {
                 case 0:
-                    if (cmbCampo.SelectedIndex == 0)
-                    {
+                    if (cmbModo.SelectedIndex == 0)
                         objOrden.OrdenarPorCodigoAscendente();
-                    }
                     else
-                    {
                         objOrden.OrdenarPorCodigoDescendente();
-                    }
                     break;
                 case 1:
-                    if (cmbCampo.SelectedIndex == 1)
-                    {
+                    if (cmbModo.SelectedIndex == 0)
                         objOrden.OrdenarPorNombreAscendente();
-                    }
                     else
-                    {
                         objOrden.OrdenarPorNombreDescendente();
-                    }
                     break;
                 case 2:
-                    if (cmbCampo.SelectedIndex == 2)
-                    {
-                        objOrden.OrdenarPorLimiteAscendente();
-                    }
+                    if (cmbModo.SelectedIndex == 0)
+                        objOrden.OrdenarPorDeudaAscendente();
                     else
-                    {
-                        objOrden.OrdenarPorLimiteDescendente();
-                    }
+                        objOrden.OrdenarPorDeudaDescendente();
                     break;
                 case 3:
-                    if (cmbCampo.SelectedIndex == 3)
-                    {
-                        objOrden.OrdenarPorDeudaAscendente();
-                    }
+                    if (cmbModo.SelectedIndex == 0)
+                        objOrden.OrdenarPorLimiteAscendente();
                     else
-                    {
-                        objOrden.OrdenarPorDeudaDescendente();
-                    }
+                        objOrden.OrdenarPorLimiteDescendente();
                     break;
             }
-            
-            objOrden.Listar(dgvListado);            
+            objOrden.RescribirVector();
+            objOrden.Listar(dgvListado);
         }
+
         private void frmListadoOrdenado_Load(object sender, EventArgs e)
         {
             cmbCampo.Items.Add("Código");

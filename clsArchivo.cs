@@ -26,7 +26,7 @@ namespace pryRGiovannettiArchivo
         private RegClientes[] vecClientes = new RegClientes[1500];
         private Int32 IND = 0;
 
-        private void CargarVector()
+        public void CargarVector()
         {
             string DatosLeidos;
             string[] vecDatos = new string[4];
@@ -73,7 +73,7 @@ namespace pryRGiovannettiArchivo
             }
         }
 
-        private void RescribirVector()
+        public void RescribirVector()
         {
             StreamWriter AD = new StreamWriter(NombreArchivo, false);
 
